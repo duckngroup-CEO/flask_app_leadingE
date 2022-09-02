@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">読込結果</h1>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+    <div>
+        <h2>請求書が作成されました。ダウンロードは以下から</h2>
+        <div>
+            <!-- <p><a href='/static/output_files/output_zip/請求書.zip' download='請求書.zip'>請求書zipファイルをダウンロード</a> -->
+            <input type="button" onclick="location.href='/static/output_files/output_zip/請求書.zip'" value="請求書zipファイルをダウンロード " download='請求書.zip' class="btn btn-primary">
+        </div>
+    </div>
+
+    {% endblock %}

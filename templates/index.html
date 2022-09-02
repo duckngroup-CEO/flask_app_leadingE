@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">請求書作成・ビジネス分析アプリ</h1>
+        <p class="lead">実行ボタンを押すとエクセルを読み込みます。</p>
+        <hr class="my-4">
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div id="app">
+    <div class="container">
+        <form method="post" , enctype="multipart/form-data" , action="/result">
+            <div class="custom-file mb-5">
+                <input type="file" name="file" class="custom-file-input" id="customFile" accept=".xlsx">
+                <label class="custom-file-label filename_display" for="customFile" data-browse="エクセルファイルを開く">エクセルファイルを選択してください</label>
+                <br><br>
+                <input type="submit" , value="読込開始" , class="btn btn-secondary btn-lg btn-block"></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

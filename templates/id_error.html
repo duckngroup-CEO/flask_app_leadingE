@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">読込結果</h1>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+    <div>
+        <h1>存在しないIDです</h1>
+        <a href="{{url_for('result_top')}}">
+            <p>戻る</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

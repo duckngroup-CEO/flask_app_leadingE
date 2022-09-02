@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">読込結果</h1>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+    <h3>読み込んだ結果を表示</h3>
+    <p>{{result}}</p>
+    <div>
+        <div>
+            <div>
+                <form method="post" , action="/graph">
+                    <h3>グラフ描画</h3>
+                    <input type="submit" , value="グラフ描画" , name="graph" , class="btn btn-warning">
+                </form>
+                <br>
+                <form action='/result_deleted'>
+                    <h3>削除</h3>
+                    <label>
+                        削除したいIDを入力    
+                        <input type="number" name="got_id" required>
+                    </label>
+                    <button type="submit" formmethod="POST" , class="btn btn-danger">削除</button>
+                </form>
+                <br>
+                <form action='/result_updated'>
+                    <h3>編集</h3>
+                    <label>
+                        編集したいIDを入力
+                        <input type="number" name="got_id" required>
+                    </label>
+                    <button type="submit" formmethod="POST" , class="btn btn-info">編集</button>
+                </form>
+                <br>
+                <form action='/result_post'>
+                    <h3>新規登録</h3>
+                    <br>
+                    <label>
+                            売上日   
+                            <input type="text" name="sales_date" required>
+                        </label>
+                    <br>
+                    <label>
+                            顧客名    
+                            <input type="text" name="cus_id" required>
+                        </label>
+                    <br>
+                    <label>
+                            商品名   
+                            <input type="text" name="pro_name" required>
+                        </label>
+                    <br>
+                    <label>
+                            単価　
+                            <input type="number" name="tanka" required>
+                        </label>
+                    <br>
+                    <label>
+                            数量　
+                            <input type="number" name="suryo" required>
+                        </label>
+                    <br>
+                    <label>
+                            合計　
+                            <input type="number" name="total" required>       
+                        </label>
+                    <br>
+                    <br>
+                    <button type="submit" formmethod="POST" , class="btn btn-success">以上の内容で新規データ追加</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>
+
+
+
+</div>
+{% endblock %}

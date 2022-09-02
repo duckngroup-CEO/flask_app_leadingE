@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">分析結果</h1>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+    <h2>売上高×日付別</h2>
+    <div>
+        <p><a href='/static/img/img_sales_date.png' download='salesdata_date.png'>以下の画像をダウンロード</a>
+    </div>
+    <p><img src="{{graphs.date}}"></p>
+
+    <h2>売上高×商品別</h2>
+    <div>
+        <p><a href='/static/img/img_sales_products.png' download='salesdata_products.png'>以下の画像をダウンロード</a>
+    </div>
+    <p><img src="{{graphs.products}}"></p>
+
+
+    <h2>売上高×顧客別</h2>
+    <div>
+        <p><a href='/static/img/img_sales_customer.png' download='salesdata_customer.png'>以下の画像をダウンロード</a>
+    </div>
+    <p><img src="{{graphs.customers}}"></p>
+</div>
+</p>
+{% endblock %}

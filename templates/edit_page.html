@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">読込結果</h1>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+    {{result}}
+    <form action='/result_edit'>
+        <h3>編集</h3>
+        <br>
+        <label>
+                売上日   
+                <input type="text" name="sales_date" required>
+            </label>
+        <br>
+        <label>
+                顧客名    
+                <input type="text" name="cus_id" required>
+            </label>
+        <br>
+        <label>
+                商品名   
+                <input type="text" name="pro_name" required>
+            </label>
+        <br>
+        <label>
+                単価　
+                <input type="number" name="tanka" required>
+            </label>
+        <br>
+        <label>
+                数量　
+                <input type="number" name="suryo" required>
+            </label>
+        <br>
+        <label>
+                合計　
+                <input type="number" name="total" required>       
+            </label>
+        <br>
+        <br>
+        <button type="submit" formmethod="POST">以上の内容でデータを更新</button>
+    </form>
+</div>
+{% endblock %}

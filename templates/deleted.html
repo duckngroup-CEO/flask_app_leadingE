@@ -1,0 +1,19 @@
+{% extends "layout.html" %} {% block header %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">読込結果</h1>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+    <div>
+        <h1>データを消去しました。</h1>
+        <br>
+        <form action='/invoice_make_done'>
+            <button type="submit" formmethod="POST" , class="btn btn-primary">以下の内容で請求書を作成</button>
+        </form>
+        <br>
+        <p>{{result}}</p>
+    </div>
+</div>
+{% endblock %}
